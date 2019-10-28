@@ -9,3 +9,10 @@ export const logout = () => {
         type: 'LOG_OUT'
     }
 }
+
+export const setUser = (email) => {
+    return {
+        type: 'SET_USER',
+        payload: email
+    }
+}

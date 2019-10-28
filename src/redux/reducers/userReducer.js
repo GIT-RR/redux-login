@@ -1,7 +1,7 @@
 const userReducer = (state = '', action) => {
-    switch (action.type, payload) {
-        case 'SET_EMAIL':
-            return true;
+    switch (action.type) {
+        case 'SET_USER':
+            return action.payload;
         default:
             return state;
     }

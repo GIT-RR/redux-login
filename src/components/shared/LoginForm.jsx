@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { useDispatch } from 'react-redux';
-import { signin } from '../../redux/actions';
+import { signin, setUser } from '../../redux/actions';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -40,6 +40,7 @@ const LoginForm = () => {
 
     const handleSubmit = () => {
         dispatch(signin());
+        dispatch(setUser(values.email));
     }
 
     return (
