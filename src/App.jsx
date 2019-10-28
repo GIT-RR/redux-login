@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
 import AuthenticatedPage from './components/pages/AuthenticatedPage';
 import NotAuthenticatedPage from './components/pages/NotAuthenticatedPage';
-
-const isAuhtenticated = false;
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const isAuhtenticated = useSelector(state => state.isAuhtenticated);
+
   return (
     isAuhtenticated ? <AuthenticatedPage /> : <NotAuthenticatedPage />
   );
